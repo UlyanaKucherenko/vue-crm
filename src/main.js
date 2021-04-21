@@ -8,7 +8,9 @@ import './registerServiceWorker'
 import router from './router'
 import store from './store'
 import dateFilter from '@/filters/date.filter.js'
+import currencyFilter from '@/filters/currency.filter.js'
 import messagePlagin from '@/utils/message.plagin'
+import Loader from '@/components/app/Loader'
 import 'materialize-css/dist/js/materialize'
 
 import firebase from 'firebase/app'
@@ -21,6 +23,8 @@ Vue.use(messagePlagin)
 Vue.use(Vuelidate)
 
 Vue.filter('date', dateFilter)
+Vue.filter('currency', currencyFilter)
+Vue.component('Loader', Loader)
 
 
 // Initialize Firebase
